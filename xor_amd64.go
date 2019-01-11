@@ -4,9 +4,9 @@
 
 package goxor
 
-// xorBytes xors the bytes in a and b. The destination should have enough
-// space, otherwise xorBytes will panic. Returns the number of bytes xor'd.
-func xorBytes(dst, a, b []byte) int {
+// XorBytes xors the bytes in a and b. The destination should have enough
+// space, otherwise XorBytes will panic. Returns the number of bytes xor'd.
+func XorBytes(dst, a, b []byte) int {
 	n := len(a)
 	if len(b) < n {
 		n = len(b)
@@ -19,8 +19,9 @@ func xorBytes(dst, a, b []byte) int {
 	return n
 }
 
-func xorWords(dst, a, b []byte) {
-	xorBytes(dst, a, b)
+// XorWords simply calls XorBytes.
+func XorWords(dst, a, b []byte) {
+	XorBytes(dst, a, b)
 }
 
 //go:noescape
