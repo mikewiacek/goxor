@@ -6,11 +6,12 @@ package goxor_test
 
 import (
 	"bytes"
-	"goxor"
 	"crypto/rand"
 	"fmt"
 	"io"
 	"testing"
+
+	"github.com/mikewiacek/goxor"
 )
 
 func TestXOR(t *testing.T) {
