@@ -4,6 +4,9 @@
 
 // +build !amd64,!ppc64,!ppc64le
 
+// Package goxor is a package that includes the optimized XOR functions from
+// Go's standard library (crypto/cipher). They are not exported from that package
+// but they are still fairly useful functions to have accessible.
 package goxor
 
 import (
